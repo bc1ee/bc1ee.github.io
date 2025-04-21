@@ -34,3 +34,5 @@ order: 4
 
 > Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
 {: .prompt-tip }
+
+本站基于[Jekyll](https://jekyllrb.com/)的[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)主题创建。
