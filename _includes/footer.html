@@ -1,0 +1,54 @@
+<footer
+  aria-label="Site Info"
+  class="
+    d-flex flex-column justify-content-center text-muted
+    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
+  "
+>
+  <p>
+    {{- '©' }}
+    <time>{{ 'now' | date: '%Y' }}</time>
+
+    {% if site.social.links %}
+      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
+    {% else %}
+      <em class="fst-normal">{{ site.social.name }}</em>.
+    {% endif %}
+
+    {% if site.data.locales[include.lang].copyright.brief %}
+      <span
+        data-bs-toggle="tooltip"
+        data-bs-placement="top"
+        title="{{ site.data.locales[include.lang].copyright.verbose }}"
+      >
+        {{- site.data.locales[include.lang].copyright.brief -}}
+      </span>
+    {% endif %}
+  </p>
+
+  <!-- 网站运行时间 -->
+  <p id="site-runtime">
+    🚀 本站已运行 <span id="runtime-days">0</span> 天
+  </p>
+
+  <!-- 访客统计 -->
+  <p class="site-stats">
+    👀 <span id="busuanzi_value_site_uv">0</span> 访客 |
+    📊 <span id="busuanzi_value_site_pv">0</span> 访问量
+  </p>
+</footer>
+
+<script>
+  // 运行时间计算
+  function updateRuntime() {
+    const startDate = new Date('2025-04-11'); // 替换为你的建站日期
+    const diff = Date.now() - startDate;
+    const days = Math.floor(diff / (86400 * 1000));
+    document.getElementById('runtime-days').textContent = days;
+  }
+  updateRuntime();
+  setInterval(updateRuntime, 86400 * 1000); // 每天更新
+</script>
+
+<!-- 不蒜子统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
