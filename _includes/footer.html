@@ -28,39 +28,10 @@
     {% endif %}
   </p>
 
-  <!-- 网站运行时间 -->
-  <p id="site-runtime">
-    🚀 本站已运行 <span id="runtime-days">0</span> 天
-  </p>
-
-  <!-- 访客统计 -->
-  <p class="site-stats">
-    👀 <span id="busuanzi_value_site_uv">{% if jekyll.environment == "production" %}0{% else %}本地调试{% endif %}</span> 访客 |
-    📊 <span id="busuanzi_value_site_pv">{% if jekyll.environment == "production" %}0{% else %}本地调试{% endif %}</span> 访问量
+  <p>
+    {% assign start_date = site.site_start_date | date: '%s' %}
+    {% assign current_date = 'now' | date: '%s' %}
+    {% assign days_running = current_date | minus: start_date | divided_by: 86400 %}
+    本站已运行 {{ days_running }} 天
   </p>
 </footer>
-
-<script>
-  // 运行时间计算
-  function updateRuntime() {
-    const startDate = new Date('2025-04-11'); // 替换为你的建站日期
-    const diff = Date.now() - startDate;
-    const days = Math.floor(diff / (86400 * 1000));
-    document.getElementById('runtime-days').textContent = days;
-  }
-  // 在 DOM 加载完成后运行
-  document.addEventListener('DOMContentLoaded', updateRuntime);
-  setInterval(updateRuntime, 86400 * 1000); // 每天更新
-</script>
-
-<!-- 不蒜子统计，仅在生产环境加载 -->
-{% if jekyll.environment == "production" %}
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js';
-    document.body.appendChild(script);
-  });
-</script>
-{% endif %}

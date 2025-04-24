@@ -153,6 +153,11 @@ paginate: 10
 # The base URL of your site
 baseurl: ""
 
+
+site_start_date: 2025-04-11
+
+
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:
