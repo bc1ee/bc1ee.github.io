@@ -21,18 +21,14 @@ order: 4
 
 上述四条也被人称为读书笔记，学习笔记，代码片段，和个人心得。
 
-> 希望通过这个博客，BC1ee，坐实我诗人的身份。
+> 希望通过这个博客，`BC1ee`，坐实我诗人的身份。
 
 ---
 
 ## 温馨一言 
 
-诗人可以拯救一切，除了印刷错误。 
-
-
-
-
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
+> 记住！水多了加面，面多了加水
 {: .prompt-tip }
+
 
 本站基于[Jekyll](https://jekyllrb.com/)的[Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy)主题创建。
