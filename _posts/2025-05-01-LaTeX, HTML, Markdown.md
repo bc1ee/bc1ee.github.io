@@ -1,5 +1,5 @@
 ---
-title: 关于 LaTeX, HTML, Markdown 的区别
+title: LaTeX, HTML, Markdown 的区别
 date: 2025-05-01 17:53 +/-TTTT 0000
 categories: [计算机, Markdown]
 tags: [静态网站, markdown, latex]     # TAG names should always be lowercase
